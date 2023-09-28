@@ -20,3 +20,5 @@ myNewFunction();
 
 var closureExample = outerFunction(); // closureExample now holds a reference to innerFunction
 closureExample(); // This will log "I am from outerFunction" because of the closure
+
+ 
