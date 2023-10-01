@@ -24,41 +24,41 @@
 
 
 
-// let newPromise = getData();
-// let result
-// console.log(newPromise);
-// function getData(){
-//     return new Promise((resolve,reject)=>{
-//         setTimeout(()=>{
-//            resolve(result = 'hello')
-//         },2000)
-//     })
+let newPromise = getData();
+let result
+console.log(newPromise);
+function getData(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+           resolve(result = 'hello')
+        },2000)
+    })
    
-// }
-// newPromise
-// .then((value)=>{
-//     result = value;
-//     console.log(result);
-//     return result
-// })
-// .then((value)=>{
-//     result = 'bye';
-//     // console.log(result);
-//     return result;
-// })
-// .then((val)=>{
-//     console.log(val);
-// });
+}
+newPromise
+.then((value)=>{
+    result = value;
+    console.log(result);
+    return result
+})
+.then((value)=>{
+    result = 'bye';
+    // console.log(result);
+    return result;
+})
+.then((val)=>{
+    console.log(val);
+});
 
-// function wordsWhichStartsWithLetteA(){
-//     let arr = ["alex", "likes", "Apple"];
-//     return arr.map((element,index,arrs)=>{
-//         if(element.charAt(0).toLowerCase() === "a"){
-//             return arrs[index];
-//         }
-//     }).filter((value)=> value !== undefined)
-// }
-// console.log(wordsWhichStartsWithLetteA());
+function wordsWhichStartsWithLetteA(){
+    let arr = ["alex", "likes", "Apple"];
+    return arr.map((element,index,arrs)=>{
+        if(element.charAt(0).toLowerCase() === "a"){
+            return arrs[index];
+        }
+    }).filter((value)=> value !== undefined)
+}
+console.log(wordsWhichStartsWithLetteA());
 
 
 // let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,-1];
@@ -122,4 +122,55 @@ for(let i =0; i<=arr.length; i++) {
 return max;
 }
 console.log(max());
-iem-bdkt-ptk
+
+
+
+let map = new Map()
+
+map.set('1','str');
+map.set(1,'null');
+
+// console.log(map.delete('1'));
+console.log(map.keys());
+
+for(let key of map.keys()){
+    console.log(key);
+}
+
+
+let john = {name:"john"};
+let ben = {name: "Ben"};
+
+let visitsCount = {};
+visitsCount[ben] = 123;
+visitsCount[ben] = 243;
+
+// console.log(visitsCount);
+
+let map2 = new Map([
+    [1,'one'],
+    [2,[1,2,3]],
+    [3, 'three']
+])
+console.log(map2);
+
+let obj = {
+    name: "John",
+    age: 30
+  };
+
+
+let obj2 = new Map(Object.entries(obj))
+console.log(obj2);
+
+
+let map3 = new Map();
+map3.set('banana', 1);
+map3.set('orange', 2);
+map3.set('meat', 4);
+
+let newObj = Object.fromEntries(map3.entries());
+console.log(newObj);
+
+
+

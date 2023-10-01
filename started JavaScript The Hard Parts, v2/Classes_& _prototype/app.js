@@ -111,3 +111,4 @@ function sayHi() {
   sayHi(); // Hi
   
   console.log(( `Called ${sayHi.counter} times` )); // Called 2 times
+
