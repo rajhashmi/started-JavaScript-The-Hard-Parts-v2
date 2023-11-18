@@ -9,7 +9,7 @@
     
 //     1. Thread of Execution 
 //     2. Memory
-f
+
 
 
 // The event loop concept is very simple. There’s an endless loop, where the JavaScript engine waits for tasks, executes them and then sleeps, waiting for more tasks.

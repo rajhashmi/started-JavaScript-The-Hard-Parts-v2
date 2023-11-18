@@ -112,3 +112,85 @@ function sayHi() {
   
   console.log(( `Called ${sayHi.counter} times` )); // Called 2 times
 
+
+
+
+
+
+
+console.log(1)
+
+function x (){
+    console.log(2);
+}
+
+console.log(3)
+
+(function y (){
+    console.log(4);
+})()
+
+setTimeout(console.log(5.1), 10) 
+
+
+setTimeout(console.log(5), 5) // goes in callback q
+
+console.log(6)
+
+ajax(console.log(7), 0) // goes in callback q
+
+console.log(8)
+
+promise(console.log(9), 3) // microtask q
+
+console.log(10)
+
+//  1
+// 3
+// 4
+// 6
+// 8
+// 10
+// 9
+// 5
+// 7
+
+
+
+
+
+
+
+
+function closure(){
+    let counter = 0;
+    function increment(){
+        console.log(counter);
+        return counter++
+    }
+    return increment
+}
+
+let func1 = closure();
+console.log(func1)
+
+
+
+
+async function shahid(){
+    let promise = await new Promise((resolve, reject)=>{
+        resolve(10);
+    });
+    console.log('4');
+    return  promise
+}
+console.log("1");
+function hello(){
+    console.log('2');
+  shahid().then((value)=>{
+        console.log(value);
+    })
+    console.log(3);
+}
+
+hello();
