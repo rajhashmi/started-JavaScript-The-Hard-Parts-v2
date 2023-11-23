@@ -21,7 +21,6 @@ myNewFunction();
 var closureExample = outerFunction(); // closureExample now holds a reference to innerFunction
 closureExample(); // This will log "I am from outerFunction" because of the closure
 
-
 // 1.  Parsing	
 // Definition	:-> The process of analyzing the syntax of a program and building a representation of its structure.
 // Purpose :-> To ensure that the program is written correctly and to make it easier for the computer to understand.
@@ -42,3 +41,13 @@ closureExample(); // This will log "I am from outerFunction" because of the clos
 // Implementation :->Lexical environments are typically implemented as data structures that are associated with each function call.
 // Impact on closures :-> Lexical environments are the data structures that store the variables that are in scope for a particular function. This information is used by the JavaScript engine to determine which variables should be part of the closure.
 // Examples :->Lexical environments are typically implemented as stacks of variable bindings. Each stack frame corresponds to a function call, and the variables that are in scope for that function call are stored in the stack frame.
+
+// generator funciton
+
+function *generate(){
+  yield 1
+  yield 2
+}
+let generatorFunction = generate();
+let element1 = generatorFunction()
+let element2 = generatorFunction()
